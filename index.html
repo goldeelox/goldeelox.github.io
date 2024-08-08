@@ -8,9 +8,9 @@
       let now = new Date();
       let diff = new Date(now.getTime() - iquit.getTime());
 
-      document.getElementById("days").innerHTML = diff.getUTCDate() - 1;
-      document.getElementById("hours").innerHTML = diff.getUTCHours();
-      document.getElementById("minutes").innerHTML = diff.getUTCMinutes();
-      document.getElementById("seconds").innerHTML = diff.getUTCSeconds();
+      document.getElementById("days").setAttribute("style", `--value:${diff.getUTCDate() - 1};`);
+      document.getElementById("hours").setAttribute("style", `--value:${diff.getUTCHours()};`);
+      document.getElementById("minutes").setAttribute("style", `--value:${diff.getUTCMinutes()};`);
+      document.getElementById("seconds").setAttribute("style", `--value:${diff.getUTCSeconds()};`);
     }
-  </script></head><body onload="updateTimer()"><div class="grid gap-5 text-center justify-center"><div class="stats shadow flex flex-row w-fit p-2" id="counter" data-starttime="1723064662"><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="days"></div><div class="stat-desc">days</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="hours"></div><div class="stat-desc">hours</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="minutes"></div><div class="stat-desc">minutes</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="seconds"></div><div class="stat-desc">seconds</div></div></div><div><h1>since you last threatened to quit</h1></div></div></body></html>
+  </script></head><body onload="updateTimer()"><div class="grid gap-2 text-center justify-center"><div class="flex flex-row gap-5 w-fit p-2" id="counter" data-starttime="1723064662"><div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"><span class="countdown font-mono text-5xl"><span id="days"></span></span> days</div><div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"><span class="countdown font-mono text-5xl"><span id="hours"></span></span> hours</div><div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"><span class="countdown font-mono text-5xl"><span id="minutes"></span></span> minutes</div><div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2"><span class="countdown font-mono text-5xl"><span id="seconds"></span></span> seconds</div></div><div><h1>since you last threatened to quit</h1></div></div></body></html>
