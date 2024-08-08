@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LostArk Una's Calculator</title>
-    <script type="module" crossorigin src="/assets/index.604db85d.js"></script>
-    <link rel="stylesheet" href="/assets/index.d412dea0.css">
-  </head>
-  <body>
-    <div id="app" class="container"></div>
-    
-  </body>
-</html>
+<html><head><link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css"><script src="https://cdn.tailwindcss.com"></script><script type="text/javascript">
+    setInterval(updateTimer, 1000);
+
+    function updateTimer() {
+      let startTime = document.getElementById("counter").getAttribute("data-starttime");
+      let iquit = new Date(0);
+      iquit.setUTCSeconds(startTime);
+      let now = new Date();
+      let diff = new Date(now.getTime() - iquit.getTime());
+
+      document.getElementById("days").innerHTML = diff.getUTCDate() - 1;
+      document.getElementById("hours").innerHTML = diff.getUTCHours();
+      document.getElementById("minutes").innerHTML = diff.getUTCMinutes();
+      document.getElementById("seconds").innerHTML = diff.getUTCSeconds();
+    }
+  </script></head><body onload="updateTimer()"><div class="grid gap-5 text-center justify-center"><div class="stats shadow flex flex-row w-fit p-2" id="counter" data-starttime="1723064662"><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="days"></div><div class="stat-desc">days</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="hours"></div><div class="stat-desc">hours</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="minutes"></div><div class="stat-desc">minutes</div></div><div class="stat min-w-40 max-w-fit"><div class="stat-value" id="seconds"></div><div class="stat-desc">seconds</div></div></div><div><h1>since you last threatened to quit</h1></div></div></body></html>
