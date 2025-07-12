@@ -9,7 +9,7 @@
       let now = new Date();
       let diff = new Date(now.getTime() - iquit.getTime());
 
-      let daysSinceIQuit = diff / oneDay;
+      let daysSinceIQuit = Math.floor(diff / oneDay);
       let weeks = Math.floor(daysSinceIQuit / 7);
       let days =  daysSinceIQuit % 7;
 
